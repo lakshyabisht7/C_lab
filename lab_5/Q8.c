@@ -17,18 +17,28 @@ int main()
     {
         printf("%d ",num[i]);
     }
+    printf("\n");
     
-    for (int i = 0; i < n/2; i++) 
+    for (int i = 0; i < n; i++) 
     {
-        int x = num[i];
-        int y = num[n-i-1];
-        if (x != y)
+        for(int j = i+1; j < n; j++)
         {
-            printf(": Not Palindrome");
-            break;
+            if(num[i]==num[j])
+            {
+                for(int k = j; k < n-1; k++)
+                {
+                    num[k] = num[k+1];
+                }
+                n--;
+                j--;
+            }
         }
     }
-    printf(": Palindrome\n");
+    
+    for(int i=0; i < n; i++)
+    {
+        printf("%d ",num[i]);
+    }
     
     return 0;
 }
