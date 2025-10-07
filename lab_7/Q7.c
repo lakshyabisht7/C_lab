@@ -21,9 +21,10 @@ int isPalindrome(int n)
         return 0;  
 }
 
-int main() {
+int main() 
+{
     int count, num;
-    printf("How many numbers do you want to check? ");
+    printf("How many numbers do you want to check?");
     scanf("%d", &count);
 
     for (int i = 0; i < count; i++) 

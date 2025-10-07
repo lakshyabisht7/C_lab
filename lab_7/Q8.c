@@ -45,7 +45,8 @@ int main()
 {
     int choice, num;
 
-    do {
+    do 
+    {
         printf("\nMenu:\n");
         printf("1. Factorial\n");
         printf("2. Check Prime\n");
@@ -54,13 +55,14 @@ int main()
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
+        switch (choice) 
+        {
             case 1:
                 printf("Enter a number: ");
                 scanf("%d", &num);
                 int fact = factorial(num);
                 if (fact == -1)
-                    printf("Invalid input! Factorial not defined for negative numbers.\n");
+                    printf("Invalid input.\n");
                 else
                     printf("Factorial of %d is %d\n", num, fact);
                 break;
@@ -81,15 +83,14 @@ int main()
                 break;
 
             case 4:
-                printf("Exiting program...\n");
+                printf("Exiting program\n");
                 break;
 
             default:
-                printf("Invalid choice! Please try again.\n");
+                printf("Invalid choice.\n");
         }
 
-    } 
-    while (choice != 4);
+    }
 
     return 0;
 }
